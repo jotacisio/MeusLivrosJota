@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Título:"
-        app:layout_constraintRight_toLeftOf="@+id/editText"
+        app:layout_constraintRight_toLeftOf="@+id/titulo"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         android:layout_marginEnd="7dp"
@@ -25,7 +25,7 @@
         android:text="Autor:"
         tools:layout_constraintBottom_creator="1"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        app:layout_constraintBottom_toBottomOf="@+id/autor"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -34,10 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ano:"
-        app:layout_constraintRight_toLeftOf="@+id/editText3"
+        app:layout_constraintRight_toLeftOf="@+id/ano"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/editText3"
+        app:layout_constraintBottom_toBottomOf="@+id/ano"
         android:layout_marginEnd="7dp" />
 
     <TextView
@@ -53,7 +53,7 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/titulo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -62,14 +62,14 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintRight_toRightOf="@+id/editText2"
+        app:layout_constraintRight_toRightOf="@+id/autor"
         android:layout_marginTop="16dp"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editText2"
+        app:layout_constraintLeft_toLeftOf="@+id/autor"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/autor"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -79,38 +79,39 @@
         android:layout_marginStart="9dp"
         android:layout_marginEnd="11dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toRightOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/ano"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintRight_toRightOf="@+id/autor"
+        app:layout_constraintTop_toBottomOf="@+id/autor"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editText2" />
+        app:layout_constraintLeft_toLeftOf="@+id/autor" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/nota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
         android:layout_marginEnd="31dp"
-        app:layout_constraintRight_toRightOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintRight_toRightOf="@+id/ano"
+        app:layout_constraintTop_toBottomOf="@+id/ano"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Salvar"
+        android:onClick="salvar"
         tools:layout_constraintBottom_creator="1"
         android:layout_marginStart="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -119,15 +120,16 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancelar"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/button3"
         android:layout_marginEnd="24dp"
+        android:text="Cancelar"
+        android:onClick="cancelar"
+        app:layout_constraintBottom_toBottomOf="@+id/salvar"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button3" />
+        app:layout_constraintTop_toTopOf="@+id/salvar"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 </android.support.constraint.ConstraintLayout>
