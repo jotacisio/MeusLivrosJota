@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.ufrn.eaj.tads.meuslivros.MainActivity"
-    android:id="@+id/layout">
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <Button
         android:id="@+id/novo"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Cadastrar Novo"
         android:onClick="cadastrar"
-        app:layout_constraintBottom_toTopOf="@+id/lista"
-        app:layout_constraintLeft_toLeftOf="@+id/lista"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1" />
+        tools:layout_editor_absoluteY="138dp"
+        tools:layout_editor_absoluteX="119dp" />
 
     <Button
         android:id="@+id/lista"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Listar Livros"
         android:onClick="listar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="232dp"
+        tools:layout_editor_absoluteX="119dp" />
+
+    <Button
+        android:id="@+id/buscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Livros"
+        android:onClick="buscar"
+        android:layout_marginStart="1dp"
+        tools:layout_editor_absoluteY="325dp"
+        tools:layout_editor_absoluteX="120dp" />
+</LinearLayout>
