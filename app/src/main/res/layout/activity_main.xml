@@ -38,4 +38,14 @@
         android:layout_marginStart="1dp"
         tools:layout_editor_absoluteY="325dp"
         tools:layout_editor_absoluteX="120dp" />
+
+    <Button
+        android:id="@+id/btn_viewholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:onClick="buscar_viewholder"
+        android:text="Buscar Livros com ViewHolder"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="325dp" />
 </LinearLayout>
